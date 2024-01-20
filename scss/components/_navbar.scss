@@ -1,0 +1,63 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include media(992) {
+      display: none;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 16px;
+      line-height: 33px;
+      color: $black;
+      
+      &::after {
+        transition: 0.3s linear;
+      }
+      &:hover {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &-btn {
+    font-size: 16px;
+    line-height: 24px;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    &:hover {
+      background: $purple;
+      color: $white;
+    }
+    @include media(992) {
+      display: none;
+    }
+  }
+}
+.burger {
+  width: 35px;
+  height: 30px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  @include media(992) {
+    display: flex;
+  }
+
+  span {
+    width: 100%;
+    height: 2px;
+    background: $black;
+  }
+}
