@@ -54,4 +54,7 @@
 }
 .boost {
   margin: 130px auto 160px;
+  @include media(768) {
+    margin: 50px auto;
+  }
 }
