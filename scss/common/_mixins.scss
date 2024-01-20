@@ -1,0 +1,23 @@
+@mixin media($size) {
+  @media(max-width: #{$size}px) {
+    @content;
+  }
+}
+
+@mixin FontFace($name, $fw, $fName,  $fUrl,  $ext, $format) {
+  @font-face {
+    font-family: $name;
+    src: url('../fonts/#{$fUrl}-#{$fName}.#{$ext}') format($format);
+    font-weight: $fw;
+  }
+}
+
+$dm: ('Regular', 400), ('Bold', 700);
+$icons: ('light-300', 300), ('regular-400', 400), ('solid-900', 900);
+
+@each $name, $weight in $dm {
+  @include FontFace('dm_sans', $weight, $name, 'DM_Sans/DMSans_18pt', 'ttf', 'truetype')
+}
+@each $name, $weight in $icons {
+  @include FontFace('icon', $weight, $name, 'icons/fa', 'ttf', 'truetype')
+}

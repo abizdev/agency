@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "dm_sans";
+  src: url("../fonts/DM_Sans/DMSans_18pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "dm_sans";
+  src: url("../fonts/DM_Sans/DMSans_18pt-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "icon";
+  src: url("../fonts/icons/fa-light-300.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "icon";
+  src: url("../fonts/icons/fa-regular-400.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "icon";
+  src: url("../fonts/icons/fa-solid-900.ttf") format("truetype");
+  font-weight: 900;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "dm_sans";
+  font-weight: 400;
+  text-decoration: none;
+  list-style: none;
+}
+
+*::before,
+*::after {
+  font-family: "icon";
+}
+
+:root {
+  --white: #ffffff;
+  --black: #0F2137;
+  --purple: #8D448B;
+  --gray: #566272;
+  --dark-gray: #343D48;
+}
+
+.container {
+  max-width: 1290px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  border: 1px solid red;
+}
+
+.body {
+  background: var(--white);
+}
+
+.icon-carrent-down::after {
+  content: "\f0d7";
+  font-weight: 900;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 13px 25px;
+  font-weight: 700;
+}
+.btn.primery {
+  background: var(--purple);
+  color: var(--white);
+}
+.btn.secondary {
+  border: 2px solid var(--purple);
+  background: #F9FBFD;
+  color: var(--purple);
+}
