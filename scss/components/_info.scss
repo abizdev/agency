@@ -31,6 +31,10 @@
       line-height: 34px;
       color: $black;
       opacity: 0.6;
+      
+      &:first-of-type {
+        opacity: 1;
+      }
     }
   }
   &__list {
@@ -57,4 +61,7 @@
   @include media(768) {
     margin: 50px auto;
   }
+}
+.support {
+  gap: 50px;
 }
