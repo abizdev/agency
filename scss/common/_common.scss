@@ -39,6 +39,7 @@ $dark-gray: var(--dark-gray);
 }
 
 .icon-carrent-down::after { content: '\f0d7'; font-weight: 900; }
+.icon-chevron-right::after { content: '\f054'; font-weight: 400; }
 
 .btn {
   border-radius: 5px;
@@ -57,4 +58,31 @@ $dark-gray: var(--dark-gray);
     background: #F9FBFD;
     color: $purple;
   }
+}
+.section-top {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-size: 18px;
+  line-height: 40px;
+  color: $purple;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.subtitle {
+  font-size: 30px;
+  line-height: 55px;
+  color: $black;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+.more-link {
+  font-size: 16px;
+  line-height: 42px;
+  color: $purple;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
