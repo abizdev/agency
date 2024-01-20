@@ -1,0 +1,80 @@
+.hire {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $purple;
+  border-radius: 8px;
+  padding: 40px 70px;
+  transform: translateY(-50%);
+  @include media(992) {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 20px 15px 50px;
+    transform: translateY(-25%);
+  }
+
+  h2 {
+    max-width: 521px;
+    width: 100%;
+    position: relative;
+    font-size: 36px;
+    line-height: 55px;
+    color: $white;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    @include media(992) {
+      text-align: center;
+    }
+    @include media(576) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    &::after {
+      width: 248px;
+      height: 118px;
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -258px;
+      background: url('../../images/line-message.svg') center center / cover no-repeat;
+      @include media(1200) {
+        display: none;
+      }
+    }
+  }
+  button {
+    padding: 19px 44px;
+    font-size: 17px;
+    line-height: 22px;
+    color: $purple;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    background: $white;
+    border-radius: 8px;
+    position: relative;
+    border: none;
+    outline: none;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 75px;
+      height: 25px;
+      background: url('../../images/hire-btn.png') center center / cover no-repeat;
+    }
+    &::before { 
+      left: 50%;
+      top: -37px;
+      transform: translate(-50%, 0);
+    }
+    &::after {
+      right: 50%;
+      bottom: -37px; 
+      transform: rotate(180deg) translate(-50%, 0); 
+    }
+  }
+}

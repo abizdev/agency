@@ -618,6 +618,7 @@
 
 .tutorials {
   min-height: 894px;
+  padding-bottom: 150px;
   background: #F8FAFC;
   margin-top: 100px;
 }
@@ -678,4 +679,89 @@
 }
 .tutorials-items__item--info span img {
   height: 25px;
+}
+
+.hire {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--purple);
+  border-radius: 8px;
+  padding: 40px 70px;
+  transform: translateY(-50%);
+}
+@media (max-width: 992px) {
+  .hire {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 20px 15px 50px;
+    transform: translateY(-25%);
+  }
+}
+.hire h2 {
+  max-width: 521px;
+  width: 100%;
+  position: relative;
+  font-size: 36px;
+  line-height: 55px;
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+@media (max-width: 992px) {
+  .hire h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .hire h2 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+.hire h2::after {
+  width: 248px;
+  height: 118px;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -258px;
+  background: url("../../images/line-message.svg") center center/cover no-repeat;
+}
+@media (max-width: 1200px) {
+  .hire h2::after {
+    display: none;
+  }
+}
+.hire button {
+  padding: 19px 44px;
+  font-size: 17px;
+  line-height: 22px;
+  color: var(--purple);
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  background: var(--white);
+  border-radius: 8px;
+  position: relative;
+  border: none;
+  outline: none;
+}
+.hire button::before, .hire button::after {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 25px;
+  background: url("../../images/hire-btn.png") center center/cover no-repeat;
+}
+.hire button::before {
+  left: 50%;
+  top: -37px;
+  transform: translate(-50%, 0);
+}
+.hire button::after {
+  right: 50%;
+  bottom: -37px;
+  transform: rotate(180deg) translate(-50%, 0);
 }
